@@ -12,18 +12,15 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
+    - name: init
       uses: actions/checkout@v4
 
-    - name: docker images
-      run: docker images
+    - name: list images
+      uses: docker images
 
-    - name: docker ver
-      run: docker version
+    - name: pull james
+      uses: docker pull apache/james:jpa-latest
 
-    - name: Pull Docker Images and Package
-      run: cmd ver
-
-    - name: Compress the TAR files
-      run: tar -czf x86-64-images.tar.gz *-amd64.tar
+    - name: list images2
+      uses: docker images
 
