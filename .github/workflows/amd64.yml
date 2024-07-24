@@ -22,7 +22,7 @@ jobs:
       run: docker version
 
     - name: Pull Docker Images and Package
-      run: ver
+      run: cmd ver
 
     - name: Compress the TAR files
       run: tar -czf x86-64-images.tar.gz *-amd64.tar
