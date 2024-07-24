@@ -16,11 +16,11 @@ jobs:
       uses: actions/checkout@v4
 
     - name: list images
-      uses: docker images
+      run: docker images
 
     - name: pull james
-      uses: docker pull apache/james:jpa-latest
+      run: docker pull apache/james:jpa-latest
 
     - name: list images2
-      uses: docker images
+      run: docker images
 
